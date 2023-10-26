@@ -624,3 +624,48 @@
 
 // console.log(0 || '' || 2 || undefined || true || false);
 // выведет 2 так как ИЛИ останавливается на ПРАВДЕ 
+
+// function TASK 
+
+// let a = 3  // глобальная область выполнения 
+// function addTwo(x) {
+//     let ret = x + 2
+//     return ret
+// }
+// let b = addTwo(a)
+// console.log(b)
+// // 2
+// let val1 = 2   //Это глобальная область                //1
+// function multiplyThis(n) {     //2
+//  let ret = n * val1
+//   return ret
+// }
+// let multiplied = multiplyThis(6) // ЭТО ГЛОБАЛЬНАЯ ОБЛАСТЬ ВЫП
+// console.log('example of scope:', multiplied);
+// //3 
+// let val = 7
+//  function createAdder() {
+//     function addNumbers(a, b) {
+//       let ret = a + b
+//      return ret
+//     }
+//     return addNumbers
+//   }
+//   let adder = createAdder()
+//  let sum = adder(val, 8)
+//  console.log('example of function returning a function: ', sum)
+
+// // замыкание 
+// function createCounter() {   //1
+//      let counter = 0   //2
+//       const myFunction = function() { //3
+//         counter = counter + 1 //4
+//         return counter //5
+//       } //6
+//       return myFunction //7
+//      } //8
+//     const increment = createCounter() //9
+//     const c1 = increment() //10
+//     const c2 = increment() // 11
+//     const c3 = increment() //12
+//     console.log('example increment', c1, c2, c3); //13
