@@ -669,3 +669,36 @@
 //     const c2 = increment() // 11
 //     const c3 = increment() //12
 //     console.log('example increment', c1, c2, c3); //13
+
+
+// ЛЕКЦИЯ 42 ОСНОВЫ JavaScript 
+// получение элементов со страницы 
+
+// обращаемся к id -ку 
+const box = document.getElementById('box');
+console.log(box);
+// обращение к тегаМ
+// получаем отдельную кнопку по тегам  обращаемся к тегам 
+const btns = document.getElementsByTagName('button')[1]; // [1] получаем вторую кнопку с помощью [1] как в массивах 
+console.log(btns);  // [1] тоже возможно в консоль вывести отдельно  
+// получаем отдельную кнопку 
+
+// Обращаемся к классам  // обращение к отдельным элементам [1], [2]
+const circle = document.getElementsByClassName('circle');
+console.log(circle);
+
+// метод querySelectorAll
+// CSS - селектор вмещаем, уникальный id, класс, псевдоклассы,
+// атрибуты 
+// если ищем id тут то ставим вначале #
+const name = document.querySelectorAll('.box');
+name.forEach(item => {   //item это каждый элемент который 
+    console.log(item);      // находится в псевдомассиве name
+});
+
+//получает первый элемент под селектор 
+const oneName = document.querySelector('button'); // позволяет вызвать только первый элемент
+console.log(oneName);
+
+// Лекция 43 ОСНОВЫ JS
+
